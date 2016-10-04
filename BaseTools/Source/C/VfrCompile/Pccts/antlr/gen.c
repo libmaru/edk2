@@ -3866,7 +3866,10 @@ int file;
 /* MR10 */    _gen(" *  ");
 /* MR10 */    for (i=0 ; i < Save_argc ; i++) {
 /* MR10 */      _gen(" ");
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wformat-security"
 /* MR10 */      _gen(Save_argv[i]);
+#pragma GCC diagnostic pop
 /* MR10 */    };
 	_gen("\n");
 	_gen(" *\n");
@@ -3911,7 +3914,7 @@ int file;
 	}
 #endif
 	/* ###WARNING: This will have to change when SetWordSize changes */
-	if ( !GenCC ) _gen1("#define zzSET_SIZE %d\n", NumWords(TokenNum-1)*sizeof(unsigned));
+	if ( !GenCC ) _gen1("#define zzSET_SIZE %zu\n", NumWords(TokenNum-1)*sizeof(unsigned));
     if (TraceGen) {
       _gen("#ifndef zzTRACE_RULES\n");  /* MR20 */
       _gen("#define zzTRACE_RULES\n");  /* MR20 */
@@ -4125,7 +4128,7 @@ char * gate;                                    /* MR10 */
 	if ( LexGen ) fprintf(f, "#define zzEOF_TOKEN %d\n", (TokenInd!=NULL?TokenInd[EofToken]:EofToken));
 #endif
 	/* ###WARNING: This will have to change when SetWordSize changes */
-	fprintf(f, "#define zzSET_SIZE %d\n", NumWords(TokenNum-1)*sizeof(unsigned));
+	fprintf(f, "#define zzSET_SIZE %zu\n", NumWords(TokenNum-1)*sizeof(unsigned));
     if (TraceGen) {
       fprintf(f,"#ifndef zzTRACE_RULES\n");  /* MR20 */
       fprintf(f,"#define zzTRACE_RULES\n");  /* MR20 */

@@ -706,7 +706,10 @@ FILE *output;
 /* MR26 */			if (! (isalpha(*t) || isdigit(*t) || *t == '_' || *t == '$')) break;
 /* MR26 */		}
 /* MR26 */	}
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wformat-security"
 /* MR26 */	fprintf(output,strBetween(pSymbol, t, pSeparator));
+#pragma GCC diagnostic pop
 
     *q = p;
     return (*pSeparator  == 0);
@@ -771,7 +774,10 @@ FILE *f;
 				  &pValue,
 				  &pSeparator,
 				  &nest);
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wformat-security"
 	fprintf(f,strBetween(pDataType, pSymbol, pSeparator));
+#pragma GCC diagnostic pop
 }
 
 /* check to see if string e is a word in string s */
@@ -851,11 +857,14 @@ int i;
 					  &pValue,
 					  &pSeparator,
 					  &nest);
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wformat-security"
 		fprintf(f,"\t");
 		fprintf(f,strBetween(pDataType, pSymbol, pSeparator));
 		fprintf(f," ");
 		fprintf(f,strBetween(pSymbol, pEqualSign, pSeparator));
 		fprintf(f,";\n");
+#pragma GCC diagnostic pop
     }
 	fprintf(f,"};\n");
 }

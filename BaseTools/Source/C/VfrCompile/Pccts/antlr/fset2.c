@@ -2210,7 +2210,10 @@ void MR_backTraceReport()
       if (p->ntype != nToken) continue;
       tn=(TokNode *)p;
       if (depth != 0) fprintf(stdout," ");
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wformat-security"
       fprintf(stdout,TerminalString(tn->token));
+#pragma GCC diagnostic pop
       depth++;
       if (! MR_AmbAidMultiple) {
         if (set_nil(tn->tset)) {

@@ -24,17 +24,17 @@ WITHOUT WARRANTIES OR REPRESENTATIONS OF ANY KIND, EITHER EXPRESS OR IMPLIED.
 // Declare module globals for keeping track of the the utility's
 // name and other settings.
 //
-STATIC STATUS mStatus                 = STATUS_SUCCESS;
-STATIC CHAR8  mUtilityName[50]        = { 0 };
-STATIC UINT64 mPrintLogLevel          = INFO_LOG_LEVEL;
-STATIC CHAR8  *mSourceFileName        = NULL;
-STATIC UINT32 mSourceFileLineNum      = 0;
-STATIC UINT32 mErrorCount             = 0;
-STATIC UINT32 mWarningCount           = 0;
-STATIC UINT32 mMaxErrors              = 0;
-STATIC UINT32 mMaxWarnings            = 0;
-STATIC UINT32 mMaxWarningsPlusErrors  = 0;
-STATIC INT8   mPrintLimitsSet         = 0;
+STATIC STATUS      mStatus                 = STATUS_SUCCESS;
+STATIC CHAR8       mUtilityName[50]        = { 0 };
+STATIC UINT64      mPrintLogLevel          = INFO_LOG_LEVEL;
+STATIC CONST CHAR8 *mSourceFileName        = NULL;
+STATIC UINT32      mSourceFileLineNum      = 0;
+STATIC UINT32      mErrorCount             = 0;
+STATIC UINT32      mWarningCount           = 0;
+STATIC UINT32      mMaxErrors              = 0;
+STATIC UINT32      mMaxWarnings            = 0;
+STATIC UINT32      mMaxWarningsPlusErrors  = 0;
+STATIC INT8        mPrintLimitsSet         = 0;
 
 STATIC
 VOID
@@ -44,11 +44,11 @@ PrintLimitExceeded (
 
 VOID
 Error (
-  CHAR8   *FileName,
-  UINT32  LineNumber,
-  UINT32  MessageCode,
-  CHAR8   *Text,
-  CHAR8   *MsgFmt,
+  CONST CHAR8   *FileName,
+  UINT32        LineNumber,
+  UINT32        MessageCode,
+  CONST CHAR8   *Text,
+  CONST CHAR8   *MsgFmt,
   ...
   )
 /*++
@@ -135,9 +135,9 @@ Notes:
 
 VOID
 ParserError (
-  UINT32  MessageCode,
-  CHAR8   *Text,
-  CHAR8   *MsgFmt,
+  UINT32        MessageCode,
+  CONST CHAR8   *Text,
+  CONST CHAR8   *MsgFmt,
   ...
   )
 /*++
@@ -189,9 +189,9 @@ Returns:
 
 VOID
 ParserWarning (
-  UINT32  ErrorCode,
-  CHAR8   *OffendingText,
-  CHAR8   *MsgFmt,
+  UINT32        ErrorCode,
+  CONST CHAR8   *OffendingText,
+  CONST CHAR8   *MsgFmt,
   ...
   )
 /*++
@@ -249,11 +249,11 @@ Returns:
 
 VOID
 Warning (
-  CHAR8   *FileName,
-  UINT32  LineNumber,
-  UINT32  MessageCode,
-  CHAR8   *Text,
-  CHAR8   *MsgFmt,
+  CONST CHAR8   *FileName,
+  UINT32        LineNumber,
+  UINT32        MessageCode,
+  CONST CHAR8   *Text,
+  CONST CHAR8   *MsgFmt,
   ...
   )
 /*++
@@ -321,11 +321,11 @@ Returns:
 
 VOID
 DebugMsg (
-  CHAR8   *FileName,
-  UINT32  LineNumber,
-  UINT64  MsgLevel,
-  CHAR8   *Text,
-  CHAR8   *MsgFmt,
+  CONST CHAR8   *FileName,
+  UINT32        LineNumber,
+  UINT64        MsgLevel,
+  CONST CHAR8   *Text,
+  CONST CHAR8   *MsgFmt,
   ...
   )
 /*++
@@ -366,13 +366,13 @@ Returns:
 
 VOID
 PrintMessage (
-  CHAR8   *Type,
-  CHAR8   *FileName,
-  UINT32  LineNumber,
-  UINT32  MessageCode,
-  CHAR8   *Text,
-  CHAR8   *MsgFmt,
-  va_list List
+  CONST CHAR8   *Type,
+  CONST CHAR8   *FileName,
+  UINT32        LineNumber,
+  UINT32        MessageCode,
+  CONST CHAR8   *Text,
+  CONST CHAR8   *MsgFmt,
+  va_list       List
   )
 /*++
 
@@ -425,7 +425,7 @@ Notes:
 {
   CHAR8       Line[MAX_LINE_LEN];
   CHAR8       Line2[MAX_LINE_LEN];
-  CHAR8       *Cptr;
+  CONST CHAR8 *Cptr;
   struct tm   *NewTime;
   time_t      CurrentTime;
 
@@ -527,8 +527,8 @@ Notes:
 STATIC
 VOID
 PrintSimpleMessage (
-  CHAR8   *MsgFmt,
-  va_list List
+  CONST CHAR8   *MsgFmt,
+  va_list       List
   )
 /*++
 Routine Description:
@@ -555,8 +555,8 @@ Returns:
 
 VOID
 ParserSetPosition (
-  CHAR8   *SourceFileName,
-  UINT32  LineNum
+  CONST CHAR8   *SourceFileName,
+  UINT32        LineNum
   )
 /*++
 
@@ -579,7 +579,7 @@ Returns:
 
 VOID
 SetUtilityName (
-  CHAR8   *UtilityName
+  CONST CHAR8   *UtilityName
   )
 /*++
 
@@ -663,7 +663,7 @@ Returns:
 
 VOID
 VerboseMsg (
-  CHAR8   *MsgFmt,
+  CONST CHAR8   *MsgFmt,
   ...
   )
 /*++
@@ -696,7 +696,7 @@ Returns:
 
 VOID
 NormalMsg (
-  CHAR8   *MsgFmt,
+  CONST CHAR8   *MsgFmt,
   ...
   )
 /*++
@@ -729,7 +729,7 @@ Returns:
 
 VOID
 KeyMsg (
-  CHAR8   *MsgFmt,
+  CONST CHAR8   *MsgFmt,
   ...
   )
 /*++

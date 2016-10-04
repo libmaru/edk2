@@ -213,7 +213,7 @@ CVfrErrorHandle::GetFileNameLineNum (
 VOID
 CVfrErrorHandle::PrintMsg (
   IN UINT32               LineNum,
-  IN CHAR8                *TokName,
+  IN CONST CHAR8          *TokName,
   IN CONST CHAR8          *MsgType,
   IN CONST CHAR8          *ErrorMsg
   )

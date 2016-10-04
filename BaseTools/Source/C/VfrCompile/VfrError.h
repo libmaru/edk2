@@ -94,7 +94,7 @@ public:
   VOID  GetFileNameLineNum (IN UINT32, OUT CHAR8 **, OUT UINT32 *);
   UINT8 HandleError (IN EFI_VFR_RETURN_CODE, IN UINT32 LineNum = 0, IN CHAR8 *TokName = NULL);
   UINT8 HandleWarning (IN EFI_VFR_WARNING_CODE, IN UINT32 LineNum = 0, IN CHAR8 *TokName = NULL);
-  VOID  PrintMsg (IN UINT32 LineNum = 0, IN CHAR8 *TokName = NULL, IN CONST CHAR8 *MsgType = "Error", IN CONST CHAR8 *ErrorMsg = "");
+  VOID  PrintMsg (IN UINT32 LineNum = 0, IN CONST CHAR8 *TokName = NULL, IN CONST CHAR8 *MsgType = "Error", IN CONST CHAR8 *ErrorMsg = "");
 };
 
 #define CHECK_ERROR_RETURN(f, v) do { EFI_VFR_RETURN_CODE r; if ((r = (f)) != (v)) { return r; } } while (0)

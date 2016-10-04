@@ -59,69 +59,69 @@ GetUtilityStatus (
 //
 VOID
 SetUtilityName (
-  CHAR8 *ProgramName
+  CONST CHAR8 *ProgramName
   )
 ;
 
 VOID
 PrintMessage (
-  CHAR8   *Type,
-  CHAR8   *FileName,
-  UINT32  LineNumber,
-  UINT32  MessageCode,
-  CHAR8   *Text,
-  CHAR8   *MsgFmt,
-  va_list List
+  CONST CHAR8   *Type,
+  CONST CHAR8   *FileName,
+  UINT32        LineNumber,
+  UINT32        MessageCode,
+  CONST CHAR8   *Text,
+  CONST CHAR8   *MsgFmt,
+  va_list       List
   );
 
 VOID
 Error (
-  CHAR8   *FileName,
-  UINT32  LineNumber,
-  UINT32  ErrorCode,
-  CHAR8   *OffendingText,
-  CHAR8   *MsgFmt,
+  CONST CHAR8   *FileName,
+  UINT32        LineNumber,
+  UINT32        MessageCode,
+  CONST CHAR8   *Text,
+  CONST CHAR8   *MsgFmt,
   ...
   )
 ;
 
 VOID
 Warning (
-  CHAR8   *FileName,
-  UINT32  LineNumber,
-  UINT32  WarningCode,
-  CHAR8   *OffendingText,
-  CHAR8   *MsgFmt,
+  CONST CHAR8   *FileName,
+  UINT32        LineNumber,
+  UINT32        MessageCode,
+  CONST CHAR8   *Text,
+  CONST CHAR8   *MsgFmt,
   ...
   )
 ;
 
 VOID
 DebugMsg (
-  CHAR8   *FileName,
-  UINT32  LineNumber,
-  UINT64  MsgLevel,
-  CHAR8   *OffendingText,
-  CHAR8   *MsgFmt,
+  CONST CHAR8   *FileName,
+  UINT32        LineNumber,
+  UINT64        MsgLevel,
+  CONST CHAR8   *Text,
+  CONST CHAR8   *MsgFmt,
   ...
   )
 ;
 
 VOID
 VerboseMsg (
-  CHAR8   *MsgFmt,
+  CONST CHAR8   *MsgFmt,
   ...
   );
 
 VOID
 NormalMsg (
-  CHAR8   *MsgFmt,
+  CONST CHAR8   *MsgFmt,
   ...
   );
 
 VOID
 KeyMsg (
-  CHAR8   *MsgFmt,
+  CONST CHAR8   *MsgFmt,
   ...
   );
 
@@ -132,25 +132,25 @@ SetPrintLevel (
 
 VOID
 ParserSetPosition (
-  CHAR8   *SourceFileName,
-  UINT32  LineNum
+  CONST CHAR8   *SourceFileName,
+  UINT32        LineNum
   )
 ;
 
 VOID
 ParserError (
-  UINT32  ErrorCode,
-  CHAR8   *OffendingText,
-  CHAR8   *MsgFmt,
+  UINT32        MessageCode,
+  CONST CHAR8   *Text,
+  CONST CHAR8   *MsgFmt,
   ...
   )
 ;
 
 VOID
 ParserWarning (
-  UINT32  ErrorCode,
-  CHAR8   *OffendingText,
-  CHAR8   *MsgFmt,
+  UINT32        ErrorCode,
+  CONST CHAR8   *OffendingText,
+  CONST CHAR8   *MsgFmt,
   ...
   )
 ;
