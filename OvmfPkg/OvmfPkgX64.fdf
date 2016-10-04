@@ -380,6 +380,11 @@ INF  MdeModulePkg/Universal/FaultTolerantWriteDxe/FaultTolerantWriteDxe.inf
 INF  MdeModulePkg/Universal/Variable/RuntimeDxe/VariableRuntimeDxe.inf
 !endif
 
+#
+# Apple Support
+#
+INF  HFSPlusBinPkg/HFSPlus.inf
+
 ################################################################################
 
 [FV.FVMAIN_COMPACT]

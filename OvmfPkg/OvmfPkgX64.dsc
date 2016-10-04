@@ -819,3 +819,8 @@
       NULL|MdeModulePkg/Library/VarCheckUefiLib/VarCheckUefiLib.inf
   }
 !endif
+
+#
+# Apple Support
+#
+HFSPlusBinPkg/HFSPlus.inf
