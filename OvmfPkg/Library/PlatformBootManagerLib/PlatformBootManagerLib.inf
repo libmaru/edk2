@@ -54,6 +54,7 @@
   LoadLinuxLib
   QemuBootOrderLib
   UefiLib
+  AppleSupportLib
 
 [Pcd]
   gUefiOvmfPkgTokenSpaceGuid.PcdEmuVariableEvent

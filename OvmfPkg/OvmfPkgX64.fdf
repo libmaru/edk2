@@ -384,6 +384,7 @@ INF  MdeModulePkg/Universal/Variable/RuntimeDxe/VariableRuntimeDxe.inf
 # Apple Support
 #
 INF  HFSPlusBinPkg/HFSPlus.inf
+INF  IntelFrameworkModulePkg/Universal/DataHubDxe/DataHubDxe.inf
 
 ################################################################################
 

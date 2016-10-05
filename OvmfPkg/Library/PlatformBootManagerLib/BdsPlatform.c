@@ -16,6 +16,7 @@
 #include <Guid/XenInfo.h>
 #include <Guid/RootBridgesConnectedEventGroup.h>
 #include <Protocol/FirmwareVolume2.h>
+#include <Library/AppleSupportLib.h>
 
 
 //
@@ -1418,6 +1419,11 @@ Routine Description:
   EFI_BOOT_MODE                      BootMode;
 
   DEBUG ((EFI_D_INFO, "PlatformBootManagerAfterConsole\n"));
+
+  //
+  // Initialize AppleSupport library
+  //
+  InitializeAppleSupport (gImageHandle, gST);
 
   if (PcdGetBool (PcdOvmfFlashVariablesEnable)) {
     DEBUG ((EFI_D_INFO, "PlatformBdsPolicyBehavior: not restoring NvVars "

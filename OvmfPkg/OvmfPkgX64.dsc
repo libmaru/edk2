@@ -158,6 +158,11 @@
   OrderedCollectionLib|MdePkg/Library/BaseOrderedCollectionRedBlackTreeLib/BaseOrderedCollectionRedBlackTreeLib.inf
   XenHypercallLib|OvmfPkg/Library/XenHypercallLib/XenHypercallLib.inf
 
+  #
+  # Apple Support
+  #
+  AppleSupportLib|OvmfPkg/Library/AppleSupportLib/AppleSupportLib.inf
+
 [LibraryClasses.common]
 !if $(SECURE_BOOT_ENABLE) == TRUE
   BaseCryptLib|CryptoPkg/Library/BaseCryptLib/BaseCryptLib.inf
@@ -820,7 +825,8 @@
   }
 !endif
 
-#
-# Apple Support
-#
-HFSPlusBinPkg/HFSPlus.inf
+  #
+  # Apple Support
+  #
+  HFSPlusBinPkg/HFSPlus.inf
+  IntelFrameworkModulePkg/Universal/DataHubDxe/DataHubDxe.inf
