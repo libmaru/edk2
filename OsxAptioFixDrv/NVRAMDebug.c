@@ -20,7 +20,7 @@
 //  gEfiMdePkgTokenSpaceGuid.PcdDebugPropertyMask|0x07
 //  gEfiMdePkgTokenSpaceGuid.PcdDebugPrintErrorLevel|0xFFFFFFFF
 // in package DSC file
-#define DBG_TO 0
+#define DBG_TO 1
 
 #if DBG_TO == 2
 	#define DBG(...) AsciiPrint(__VA_ARGS__);
