@@ -74,7 +74,7 @@ MachOGetEntryAddress(IN VOID *MachOImage)
 		// invalid MachOImage
 		return Address;
 	}
-	DBG("ncmds: %d\n", NCmds, LCmd);
+	DBG("ncmds: %d\n", NCmds);
 	//gBS->Stall(10 * 1000000);
 	
 	// iterate over load commands
