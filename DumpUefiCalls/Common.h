@@ -84,7 +84,7 @@
 // 1 - will print dumps for ST, RT vars when ExitBootServices() is called
 // 0 - will skip printing dumps
 //
-#define PRINT_DUMPS			1
+#define PRINT_DUMPS			0
 
 //
 // PRINT_SHELL_VARS:
