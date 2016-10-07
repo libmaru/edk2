@@ -353,12 +353,8 @@ MAP_EFI_GUID_STR EfiGuidStrMap[] = {
 };
 
 
-/** Print buffer for unknown GUID printing. Allocated as RT mem
- *  and gets converted in RuntimeServices.c VirtualAddressChangeEvent().
- */
-CHAR16	*GuidPrintBuffer = NULL;
+/** Print buffer for unknown GUID printing. */
 #define GUID_PRINT_BUFFER_SIZE		((36+1) * sizeof(CHAR16))
-//CHAR16	GuidPrintBuffer[40];
 
 /** Buffer for RT variable names. Allocated as RT mem
  *  and gets converted in RuntimeServices.c VirtualAddressChangeEvent().
@@ -378,24 +374,29 @@ CHAR16*
 EFIAPI
 GuidStr(IN EFI_GUID *Guid)
 {
+	static CHAR16	GuidPrintBuffer[ GUID_PRINT_BUFFER_SIZE / sizeof(CHAR16) ];
+	static UINTN	in_GuidStr = 0;
+
 	UINTN	i;
 	CHAR16	*Str = NULL;
-	
-	if (GuidPrintBuffer == NULL) {
-		GuidPrintBuffer = AllocateRuntimePool(GUID_PRINT_BUFFER_SIZE);
-	}
 
-	for(i = 1; EfiGuidStrMap[i].Guid != NULL; i++) {
-		if (CompareGuid(EfiGuidStrMap[i].Guid, Guid)) {
-			Str = EfiGuidStrMap[i].Str;
-			break;
+	if (in_GuidStr) {
+		return L"<nested GuidStr>";
+	} else {
+		in_GuidStr = 1;
+		for(i = 1; EfiGuidStrMap[i].Guid != NULL; i++) {
+			if (CompareGuid(EfiGuidStrMap[i].Guid, Guid)) {
+				Str = EfiGuidStrMap[i].Str;
+				break;
+			}
 		}
+		if (Str == NULL) {
+			UnicodeSPrint(GuidPrintBuffer, GUID_PRINT_BUFFER_SIZE, L"%g", Guid);
+			Str = GuidPrintBuffer;
+		}
+		in_GuidStr = 0;
+		return Str;
 	}
-	if (Str == NULL) {
-		UnicodeSPrint(GuidPrintBuffer, GUID_PRINT_BUFFER_SIZE, L"%g", Guid);
-		Str = GuidPrintBuffer;
-	}
-	return Str;
 }
 
 
