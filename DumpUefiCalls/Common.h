@@ -51,11 +51,7 @@
 // 0 - will disable file output
 // Note: append while logging (options 3,4) works fine on CloverEFI, but varies between different UEFI firmwares, use only if needed for debugging.
 //
-#ifdef DEBUG_ON_SERIAL_PORT
 #define LOG_TO_FILE			0
-#else
-#define LOG_TO_FILE			4
-#endif
 
 //
 // LOG_TO_FILE_PATH
