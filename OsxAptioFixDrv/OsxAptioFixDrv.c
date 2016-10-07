@@ -47,9 +47,9 @@
 
 // defines the size of block that will be allocated for kernel image relocation,
 //   without RT and MMIO regions
-// rehabman - Increase the size for ElCapitan to 128Mb 0x8000
+// rehabman - Increase the size for Sierra to 640MB 0x28000
 // stinga11 - 0x6000
-#define KERNEL_BLOCK_NO_RT_SIZE_PAGES	0x8000
+#define KERNEL_BLOCK_NO_RT_SIZE_PAGES	0x28000
 
 // TRUE if we are doing hibernate wake
 BOOLEAN gHibernateWake = FALSE;
