@@ -828,5 +828,6 @@
   #
   # Apple Support
   #
+  DumpUefiCalls/DumpUefiCalls.inf
   HFSPlusBinPkg/HFSPlus.inf
   IntelFrameworkModulePkg/Universal/DataHubDxe/DataHubDxe.inf
