@@ -44,9 +44,6 @@
 	#define DBG(...)
 #endif
 
-#include "../Version.h"
-CONST CHAR8* CloverRevision = REVISION_STR;
-
 
 // defines the size of block that will be allocated for kernel image relocation,
 //   without RT and MMIO regions
