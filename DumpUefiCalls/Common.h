@@ -40,11 +40,7 @@
 // in package DSC file (Clover.dsc)
 // Alternatively, they can be defined directly in global [LibraryClasses] and [PcdsFixedAtBuild] of DSC file (as in DumpUefiCalls.dsc)
 //
-#ifdef DEBUG_ON_SERIAL_PORT
-#define LOG_TO_SERIAL			2
-#else
-#define LOG_TO_SERIAL			0
-#endif
+#define LOG_TO_SERIAL			1
 
 //
 // LOG_TO_FILE:
@@ -128,7 +124,7 @@
 // 1 - will capture conout, allowing it to be displayed to screen also (useful when saving to file)
 // 0 - will skip capturing conout
 //
-#define CAPTURE_CONSOLE_OUTPUT		1
+#define CAPTURE_CONSOLE_OUTPUT		0
 
 //
 // CLEANER_LOG
