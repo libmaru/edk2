@@ -809,8 +809,8 @@ UINTN
 FixBootingWithoutRelocBlock(UINTN bootArgs, BOOLEAN ModeX64)
 {
 	VOID					*pBootArgs = (VOID*)bootArgs;
-	BootArgs				*BA;
 	/*
+	BootArgs				*BA;
 	UINTN					MemoryMapSize;
 	EFI_MEMORY_DESCRIPTOR	*MemoryMap;
 	UINTN					DescriptorSize;
@@ -821,10 +821,10 @@ FixBootingWithoutRelocBlock(UINTN bootArgs, BOOLEAN ModeX64)
 	
 	BootArgsPrint(pBootArgs);
 	
-	BA = GetBootArgs(pBootArgs);
-	
 	/*
 	 
+	BA = GetBootArgs(pBootArgs);
+	
 	// Set boot args efi system table to our copied system table
 	DBG(" old BA->efiSystemTable = %x:\n", *BA->efiSystemTable);
 	*BA->efiSystemTable = (UINT32)gRelocatedSysTableRtArea;
