@@ -82,8 +82,6 @@ typedef struct {
   { 0x5cf32e68, 0x7660, 0x449b, { 0x80, 0xe6, 0x7e, 0xa3, 0x6e, 0x3, 0xf6, 0xa8 } }
 #define EFI_USER_CREDENTIAL_CLASS_PASSWORD \
   { 0xf8e5058c, 0xccb6, 0x4714, { 0xb2, 0x20, 0x3f, 0x7e, 0x3a, 0x64, 0xb, 0xd1 } }
-#define EFI_USER_CREDENTIAL_CLASS_SMART_CARD \
-  { 0x5f03ba33, 0x8c6b, 0x4c24, { 0xaa, 0x2e, 0x14, 0xa2, 0x65, 0x7b, 0xd4, 0x54 } }
 #define EFI_USER_CREDENTIAL_CLASS_FINGERPRINT \
   { 0x32cba21f, 0xf308, 0x4cbc, { 0x9a, 0xb5, 0xf5, 0xa3, 0x69, 0x9f, 0x4, 0x4a } }
 #define EFI_USER_CREDENTIAL_CLASS_HANDPRINT \
@@ -154,10 +152,6 @@ typedef EFI_GUID EFI_USER_INFO_CREDENTIAL_PROVIDER;
 ///
 #define EFI_USER_INFO_CREDENTIAL_PROVIDER_NAME_RECORD 0x09
 typedef CHAR16 *EFI_USER_INFO_CREDENTIAL_PROVIDER_NAME;
-///
-/// Provides PKCS#11 credential information from a smart card.
-///
-#define EFI_USER_INFO_PKCS11_RECORD                   0x0A
 ///
 /// Provides standard biometric information in the format specified by the ISO 19785 (Common 
 /// Biometric Exchange Formats Framework) specification.
@@ -613,7 +607,6 @@ extern EFI_GUID gEfiUserManagerProtocolGuid;
 extern EFI_GUID gEfiEventUserProfileChangedGuid;
 extern EFI_GUID gEfiUserCredentialClassUnknownGuid;
 extern EFI_GUID gEfiUserCredentialClassPasswordGuid;
-extern EFI_GUID gEfiUserCredentialClassSmartCardGuid;
 extern EFI_GUID gEfiUserCredentialClassFingerprintGuid;
 extern EFI_GUID gEfiUserCredentialClassHandprintGuid;
 extern EFI_GUID gEfiUserCredentialClassSecureCardGuid;

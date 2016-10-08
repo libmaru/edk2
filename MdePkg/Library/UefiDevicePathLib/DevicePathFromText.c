@@ -2461,28 +2461,6 @@ DevPathFromTextUsbCDCData (
 }
 
 /**
-  Converts a text device path node to USB smart card device path structure.
-
-  @param TextDeviceNode  The input Text device path node.
-
-  @return A pointer to the newly-created USB smart card device path structure.
-
-**/
-EFI_DEVICE_PATH_PROTOCOL *
-DevPathFromTextUsbSmartCard (
-  IN CHAR16 *TextDeviceNode
-  )
-{
-  USB_CLASS_TEXT  UsbClassText;
-
-  UsbClassText.ClassExist    = FALSE;
-  UsbClassText.Class         = USB_CLASS_SMART_CARD;
-  UsbClassText.SubClassExist = TRUE;
-
-  return ConvertFromTextUsbClass (TextDeviceNode, &UsbClassText);
-}
-
-/**
   Converts a text device path node to USB video device path structure.
 
   @param TextDeviceNode  The input Text device path node.
@@ -3544,7 +3522,6 @@ GLOBAL_REMOVE_IF_UNREFERENCED DEVICE_PATH_FROM_TEXT_TABLE mUefiDevicePathLibDevP
   {L"UsbMassStorage",          DevPathFromTextUsbMassStorage          },
   {L"UsbHub",                  DevPathFromTextUsbHub                  },
   {L"UsbCDCData",              DevPathFromTextUsbCDCData              },
-  {L"UsbSmartCard",            DevPathFromTextUsbSmartCard            },
   {L"UsbVideo",                DevPathFromTextUsbVideo                },
   {L"UsbDiagnostic",           DevPathFromTextUsbDiagnostic           },
   {L"UsbWireless",             DevPathFromTextUsbWireless             },

@@ -49,7 +49,6 @@
 ///
 ///@{
 #define PCI_SUBCLASS_GPIB          0x04
-#define PCI_SUBCLASS_SMART_CARD    0x05
 ///@}
 
 ///

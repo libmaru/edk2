@@ -1774,8 +1774,6 @@ STATIC CONST GUID_INFO_BLOCK mGuidStringList[] = {
   {STRING_TOKEN(STR_H2_SB),                 &gEfiHash2ServiceBindingProtocolGuid,             NULL},
   {STRING_TOKEN(STR_HASH2),                 &gEfiHash2ProtocolGuid,                           NULL},
   {STRING_TOKEN(STR_BIO_C),                 &gEfiBlockIoCryptoProtocolGuid,                   NULL},
-  {STRING_TOKEN(STR_SCR),                   &gEfiSmartCardReaderProtocolGuid,                 NULL},
-  {STRING_TOKEN(STR_SCE),                   &gEfiSmartCardEdgeProtocolGuid,                   NULL},
   {STRING_TOKEN(STR_USB_FIO),               &gEfiUsbFunctionIoProtocolGuid,                   NULL},
   {STRING_TOKEN(STR_BC_HC),                 &gEfiBluetoothHcProtocolGuid,                     NULL},
   {STRING_TOKEN(STR_BC_IO_SB),              &gEfiBluetoothIoServiceBindingProtocolGuid,       NULL},

@@ -312,8 +312,6 @@
 #string STR_H2_SB                 #language en-US "Hash2ServiceBinding"
 #string STR_HASH2                 #language en-US "Hash2"
 #string STR_BIO_C                 #language en-US "BlockIoCrypto"
-#string STR_SCR                   #language en-US "SmartCardReader"
-#string STR_SCE                   #language en-US "SmartCardEdge"
 #string STR_USB_FIO               #language en-US "UsbFunctionIo"
 #string STR_BC_HC                 #language en-US "BluetoothHc"
 #string STR_BC_IO_SB              #language en-US "BluetoothIoServiceBinding"

@@ -540,11 +540,6 @@ PCI_CLASS_ENTRY PCISubClass_07[] = {
     PCIBlankEntry
   },
   {
-    0x05,
-    L"Smart Card",
-    PCIBlankEntry
-  },
-  {
     0x80,
     L"Other communication device",
     PCIBlankEntry

@@ -1050,10 +1050,6 @@ DevPathToTextUsbClass (
     UefiDevicePathLibCatPrint (Str, L"UsbCDCData");
     break;
 
-  case USB_CLASS_SMART_CARD:
-    UefiDevicePathLibCatPrint (Str, L"UsbSmartCard");
-    break;
-
   case USB_CLASS_VIDEO:
     UefiDevicePathLibCatPrint (Str, L"UsbVideo");
     break;

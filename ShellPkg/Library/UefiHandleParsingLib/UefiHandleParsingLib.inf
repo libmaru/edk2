@@ -269,8 +269,6 @@
   gEfiHash2ServiceBindingProtocolGuid                     ## UNDEFINED
   gEfiHash2ProtocolGuid                                   ## UNDEFINED
   gEfiBlockIoCryptoProtocolGuid                           ## UNDEFINED
-  gEfiSmartCardReaderProtocolGuid                         ## UNDEFINED
-  gEfiSmartCardEdgeProtocolGuid                           ## UNDEFINED
   gEfiUsbFunctionIoProtocolGuid                           ## UNDEFINED
   gEfiBluetoothHcProtocolGuid                             ## UNDEFINED
   gEfiBluetoothIoServiceBindingProtocolGuid               ## UNDEFINED

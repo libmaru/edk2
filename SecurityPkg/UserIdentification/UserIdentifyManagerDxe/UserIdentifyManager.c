@@ -656,7 +656,6 @@ CheckUserInfo (
     }
     break;
 
-  case EFI_USER_INFO_PKCS11_RECORD:
   case EFI_USER_INFO_CBEFF_RECORD:
     break;
 

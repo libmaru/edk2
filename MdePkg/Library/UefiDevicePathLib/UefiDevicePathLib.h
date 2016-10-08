@@ -94,7 +94,6 @@ typedef struct {
 #define USB_CLASS_MASS_STORAGE     8
 #define USB_CLASS_HUB              9
 #define USB_CLASS_CDCDATA          10
-#define USB_CLASS_SMART_CARD       11
 #define USB_CLASS_VIDEO            14
 #define USB_CLASS_DIAGNOSTIC       220
 #define USB_CLASS_WIRELESS         224
