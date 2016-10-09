@@ -105,7 +105,7 @@
 // 1 - will print AllocatePool() calls, note that there are a lot of them
 // 0 - will skip printing AllocatePool() calls.
 //
-#define PRINT_ALLOCATE_POOL		0
+#define PRINT_ALLOCATE_POOL		1
 
 //
 // CAPTURE_FILESYSTEM_ACCESS		1
