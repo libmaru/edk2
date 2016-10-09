@@ -831,4 +831,3 @@
   DumpUefiCalls/DumpUefiCalls.inf
   HFSPlusBinPkg/HFSPlus.inf
   IntelFrameworkModulePkg/Universal/DataHubDxe/DataHubDxe.inf
-  OsxAptioFixDrv/OsxAptioFixDrv.inf

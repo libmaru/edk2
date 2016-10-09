@@ -386,7 +386,6 @@ INF  MdeModulePkg/Universal/Variable/RuntimeDxe/VariableRuntimeDxe.inf
 INF  DumpUefiCalls/DumpUefiCalls.inf
 INF  HFSPlusBinPkg/HFSPlus.inf
 INF  IntelFrameworkModulePkg/Universal/DataHubDxe/DataHubDxe.inf
-INF  OsxAptioFixDrv/OsxAptioFixDrv.inf
 
 ################################################################################
 
