@@ -856,7 +856,7 @@ MarkMemoryRangeForRuntimeAccess (
 
   Status = gBS->AllocatePages (
                   AllocateAddress,
-                  EfiRuntimeServicesData,
+                  EfiPalCode,
                   EFI_SIZE_TO_PAGES (Length),
                   &BaseAddress
                   );
