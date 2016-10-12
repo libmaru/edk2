@@ -98,7 +98,7 @@
 // 1 - will print memmap when GetMemoryMap() is called
 // 0 - will skip printing memmap
 //
-#define PRINT_MEMORY_MAP		0
+#define PRINT_MEMORY_MAP		1
 
 //
 // PRINT_ALLOCATE_POOL:
