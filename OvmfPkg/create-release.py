@@ -146,16 +146,6 @@ LICENSE += read_file(os.path.join('MdePkg', 'License.txt'))
 LICENSE += to_dos_text(
 '''
 === BSD license: END ===
-
-=== FAT filesystem driver license: START ===
-
-''')
-
-LICENSE += read_file(os.path.join('FatBinPkg', 'License.txt'))
-
-LICENSE += to_dos_text(
-'''
-=== FAT filesystem driver license: END ===
 ''')
 
 def build(arch):
